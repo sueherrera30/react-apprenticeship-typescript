@@ -3,16 +3,15 @@ interface User {
   age: number;
   occupation: string;
 }
-
 interface Admin {
   name: string;
   age: number;
   role: string;
 }
 
-type Person = unknown;
+type Person = User | Admin;
 
-const persons: User[] = [
+const persons: Person[] = [
   {
       name: 'Max Mustermann',
       age: 25,
